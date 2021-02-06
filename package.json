@@ -10,15 +10,33 @@
     "build": "nuxtron build"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.13.0",
+    "@nuxtjs/style-resources": "^0.1.1",
+    "bootstrap-vue": "^2.21.2",
+    "chart.js": "^2.7.1",
+    "cross-env": "^5.2.0",
     "electron-serve": "^1.0.0",
-    "electron-store": "^6.0.1"
+    "electron-store": "^6.0.1",
+    "express": "^4.16.3",
+    "flag-icon-css": "^2.9.0",
+    "font-awesome": "^4.7.0",
+    "nuxt": "^2.0.0",
+    "simple-line-icons": "^2.4.1",
+    "vue-chartjs": "^3.1.1"
   },
   "devDependencies": {
     "@nuxt/typescript": "^2.8.1",
     "@types/node": "^12.7.12",
+    "babel-eslint": "^8.2.1",
     "electron": "^10.1.5",
     "electron-builder": "^22.9.1",
-    "nuxt": "^2.14.7",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.11.0",
+    "sass-loader": "^6.0.6",
     "nuxtron": "^0.3.1",
     "typescript": "^3.6.4"
   }
