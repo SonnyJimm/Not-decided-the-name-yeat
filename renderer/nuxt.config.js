@@ -50,7 +50,13 @@ module.exports = {
     './node_modules/simple-line-icons/css/simple-line-icons.css',
     /* Import Bootstrap Vue Styles */
     './node_modules/bootstrap-vue/dist/bootstrap-vue.css',
-    /* Import Core SCSS */
+    '../node_modules/flag-icon-css/css/flag-icon.min.css',
+    /* Import Font Awesome Icons Set */
+    '../node_modules/font-awesome/css/font-awesome.min.css',
+    /* Import Simple Line Icons Set */
+    '../node_modules/simple-line-icons/css/simple-line-icons.css',
+    /* Import Bootstrap Vue Styles */
+    '../node_modules/bootstrap-vue/dist/bootstrap-vue.css',
     { src: '~/assets/scss/style.scss', lang: 'scss' }
   ],
 
