@@ -5,8 +5,10 @@ import Footer from './Footer.vue'
 import Header from './Header/Header.vue'
 import Sidebar from './Sidebar/Sidebar.vue'
 import Switch from './Switch.vue'
+import customerD from './customerD.vue'
 
 export {
+  customerD,
   Aside,
   Breadcrumb,
   Callout,

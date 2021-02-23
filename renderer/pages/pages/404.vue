@@ -28,6 +28,6 @@
 <script>
 export default {
   name: 'Page 404',
-  layout: 'clean'
+  layout: 'example'
 }
 </script>
