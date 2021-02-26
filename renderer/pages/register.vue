@@ -1,17 +1,17 @@
 <template>
   <div class="animated fadeIn">
      <div class="container" style="margin-top:40px">
-       <form>
+  <form>
 
   <div class="form-group row">
-    <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+    <label for="inputname" class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputEmail3" placeholder="Name">
+      <input type="text" class="form-control" id="inputname" placeholder="Name">
     </div>
   </div>
   
   <div class="form-group row">
-    <label for="inputAge" class="col-sm-2 col-form-label">age</label>
+    <label for="inputage" class="col-sm-2 col-form-label">age</label>
     <div class="col-sm-10">
       <input type="number" class="form-control" id="inputage" placeholder="Age">
     </div>
@@ -33,7 +33,7 @@
 
   <div class="form-group row">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Register</button>
+      <input type="button" v-on:click="check" class="btn btn-primary" value="Register"/>
     </div>
   </div>
 </form>
@@ -56,7 +56,75 @@ export default {
     }
   },
   methods: {
-    
+    check:async function()
+    {
+      let name = document.getElementById("inputname");
+      let age = document.getElementById("inputage");
+      let phone_number = document.getElementById("inputphone");
+      let reason = document.getElementById("inputreason");
+      let result;
+      let state=true;
+        if(name.value!="")
+        {
+          name.placeholder="Name";
+          name.classList.remove("is-invalid");
+        }else
+        {
+          state=false;
+          name.classList.add("is-invalid");
+          name.placeholder="This feild cant be empty";
+        }
+        if(age.value!=""&&age.value>0)
+        {
+          age.placeholder="Age";
+          age.classList.remove("is-invalid");
+        }else
+        {
+          state=false;
+          age.classList.add("is-invalid");
+          age.placeholder="This feild cant be empty";
+        }
+        if(phone_number.value!=""&&phone_number.value>0)
+        {
+          phone_number.placeholder="Phone Number";
+          phone_number.classList.remove("is-invalid");
+        }else
+        {
+          state=false;
+          phone_number.classList.add("is-invalid");
+          phone_number.placeholder="This feild cant be empty";
+        }
+        if(reason.value!="")
+        {
+          reason.placeholder="Reason";
+          reason.classList.remove("is-invalid");
+        }else
+        {
+          state=false;
+          reason.classList.add("is-invalid");
+          reason.placeholder="This feild cant be empty";
+        }
+        if(state == true)
+        {
+          result = await this.$axios.$post(`http://127.0.0.1:5000/que`,
+          {
+           
+              "name":name.value,
+              "age":age.value,
+              "reason":reason.value,
+              "phone_number":phone_number.value,
+              "attemptedTime":Date()
+           
+          })
+        }
+        
+    },
+    sendData: function()
+    {
+      alert('Sup');
+    }
+  },
+  computed :{
   }
 }
 </script>
